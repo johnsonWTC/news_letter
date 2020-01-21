@@ -4,7 +4,10 @@ const request = require("request");
 
 
 const application = express();
-application.listen(3001,function(req, res){
-console.log("server is now running");
+application.listen(3002,function(req, res){
+console.log("server is running");
+});
 
+application.get("/", function(req,res){
+res.sendFile(__dirname + "/signup.html");
 });
